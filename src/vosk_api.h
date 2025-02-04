@@ -17,6 +17,8 @@
 #ifndef VOSK_API_H
 #define VOSK_API_H
 
+#include <sys/time.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -216,6 +218,12 @@ void vosk_recognizer_set_partial_words(VoskRecognizer *recognizer, int partial_w
  * @param nlsml - boolean value
  */
 void vosk_recognizer_set_nlsml(VoskRecognizer *recognizer, int nlsml);
+
+/**
+ * Set timestamp from client,
+ *
+ */
+void vosk_recognizer_set_timestamp(VoskRecognizer *recognizer, struct timeval *timestamp);
 
 
 /** Accept voice data
