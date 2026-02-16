@@ -220,10 +220,16 @@ void vosk_recognizer_set_partial_words(VoskRecognizer *recognizer, int partial_w
 void vosk_recognizer_set_nlsml(VoskRecognizer *recognizer, int nlsml);
 
 /**
- * Set timestamp from client,
+ * Set timestamp from client. CUSTOM FUNCTION!!!
  *
  */
 void vosk_recognizer_set_timestamp(VoskRecognizer *recognizer, struct timeval *timestamp);
+
+/**
+ * Allow runtime change of sample rate. CUSTOM FUNCTION!!!
+ *
+ */
+void vosk_recognizer_set_sample_rate(VoskRecognizer *recognizer, float sample_rate);
 
 
 /** Accept voice data
