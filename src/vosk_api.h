@@ -231,6 +231,18 @@ void vosk_recognizer_set_timestamp(VoskRecognizer *recognizer, struct timeval *t
  */
 void vosk_recognizer_set_sample_rate(VoskRecognizer *recognizer, float sample_rate);
 
+/**
+ * Allow runtime change of sample format. CUSTOM FUNCTION!!!
+ *
+ */
+void vosk_recognizer_set_sample_format(VoskRecognizer *recognizer, const char *format);
+
+/**
+ * Allow runtime config of typical waveform buffer size. CUSTOM FUNCTION!!!
+ *
+ */
+void vosk_recognizer_set_waveform_chunklen(VoskRecognizer *recognizer, int length);
+
 
 /** Accept voice data
  *
